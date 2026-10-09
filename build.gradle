@@ -1,0 +1,117 @@
+plugins {
+	id "maven-publish"
+	alias libs.plugins.loom
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+    maven { url = 'https://maven.nucleoid.xyz/' }
+}
+
+dependencies {
+    compileOnly 'eu.pb4:polymer-core:0.18.2+26.3'
+    compileOnly 'eu.pb4:polymer-resource-pack:0.18.2+26.3'
+    if (project.hasProperty('withPolymer')) {
+        runtimeOnly 'eu.pb4:polymer-core:0.18.2+26.3'
+        runtimeOnly 'eu.pb4:polymer-resource-pack:0.18.2+26.3'
+    }
+	minecraft libs.minecraft
+	implementation libs.fabric.loader
+	implementation libs.fabric.api
+}
+
+processResources {
+	inputs.property "version", project.version
+	inputs.property "mod_id", project.mod_id
+	inputs.property "mod_name", project.mod_name
+	inputs.property "mod_description", project.mod_description
+
+	filesMatching("fabric.mod.json") {
+		expand(
+			version: project.version,
+			mod_id: project.mod_id,
+			mod_name: project.mod_name,
+			mod_description: project.mod_description
+		)
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = "UTF-8"
+	options.release = 25
+}
+
+java {
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+loom {
+	runs {
+		server {
+			runDir = System.getProperty("blocktools.runDir", "run")
+		}
+	}
+}
+
+test {
+	failOnNoDiscoveredTests = false
+}
+
+tasks.register("logicTest", JavaExec) {
+	group = "verification"
+	description = "Runs palette, cuboid, calculation, transaction, autocomplete, and stair regression checks."
+	dependsOn testClasses
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = "com.thenathe.blocktools.LogicTest"
+}
+
+check.dependsOn logicTest
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.archives_base_name}" }
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			from components.java
+		}
+	}
+}
+
+tasks.register("tunnelGeometryTest", JavaExec) {
+    group = "verification"
+    description = "Runs tunnel geometry, palette, command, and safety regression checks."
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.thenathe.blocktools.tunnel.TunnelGeometryTest"
+}
+check.dependsOn tunnelGeometryTest
+
+tasks.register("compatibilityTest", JavaExec) {
+    group = "verification"
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.thenathe.blocktools.compat.BuildPermissionsTest"
+}
+tasks.register("integrationLogicTest", JavaExec) {
+    group = "verification"
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.thenathe.blocktools.tunnel.IntegrationLogicTest"
+}
+check.dependsOn compatibilityTest, integrationLogicTest
+
+apply from: 'qa.gradle'
+
+apply from: 'clientqa.gradle'

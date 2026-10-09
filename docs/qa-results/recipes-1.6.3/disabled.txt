@@ -1,0 +1,17 @@
+PASS: survival shortage leaves world and inventory unchanged
+PASS: survival consumes exact shell materials from shulker
+PASS: obstructions and unsafe shells cause no partial edits
+PASS: creative lining requires no inventory
+PASS: native adventure spectator unloaded bounds and border checks
+PASS: straight survival rail runs preserve shell and power boosters
+PASS: special rails are preserved
+PASS: commands aliases pause disarm and mutually exclusive modes
+PASS: blocktone modifies selection and charges survival inventory
+PASS: path tool applies a real survival stripe with exact inventory charge
+PASS: path dirt conversion and shortage regressions
+PASS: held-tool movement catch-up backtracking and reset safety
+PASS: selection path and tunnel visual interfaces
+PASS: malformed and future settings preserved byte for byte
+PASS: optional Polymer roles migrations and reload
+PASS: standalone copy has no Precious Stones claim engine
+RESULT: PASS; assertions=424; failed_cases=0

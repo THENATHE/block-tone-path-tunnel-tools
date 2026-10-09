@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "THENATHE"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.thenathe.blocktools.BlockToolsMod"
+    ],
+    "client": [
+      "com.thenathe.blocktools.client.BlockToolsClient"
+    ]
+  },
+  "suggests": {
+    "polymer-core": ">=0.18.2",
+    "polymer-resource-pack": ">=0.18.2"
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "fabric-api": ">=0.161.0",
+    "minecraft": "~26.3",
+    "java": ">=25"
+  },
+  "mixins": [
+    "blocktools.client.mixins.json"
+  ]
+}

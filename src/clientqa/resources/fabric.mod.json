@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "blocktools_clientqa",
+  "version": "1",
+  "name": "Blocktools Development Client QA",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-client-gametest": [
+      "com.thenathe.blocktools.clientqa.SpriteResolutionClientQa",
+      "com.thenathe.blocktools.clientqa.TunnelWalkClientQa"
+    ]
+  },
+  "depends": {
+    "blocktonepathtools": "*",
+    "fabric-client-gametest-api-v1": "*"
+  }
+}

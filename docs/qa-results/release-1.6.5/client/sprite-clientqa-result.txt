@@ -1,0 +1,38 @@
+PASS: actual personal command selects auto -> 16
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel at16
+PASS: native renderer chose blocktonepathtools:item/garden_trowel at16
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick at16
+PASS: default effective vanilla textures detect16
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/garden_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick_32 at32
+PASS: auto reacts to actual32 resource-pack reload
+PASS: actual personal command selects 16x16 -> 16
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel at16
+PASS: native renderer chose blocktonepathtools:item/garden_trowel at16
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick at16
+PASS: manual16 wins over64 client pack report
+PASS: actual personal command selects auto -> 32
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/garden_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick_32 at32
+PASS: 64pack selects highest available32 in auto
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel at16
+PASS: native renderer chose blocktonepathtools:item/garden_trowel at16
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick at16
+PASS: mixed pack uses conservative16 fallback
+PASS: actual personal command selects 32x32 -> 32
+PASS: manual32 remains selected after return to16 pack
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/garden_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick_32 at32
+PASS: client effective mode resets on disconnect
+PASS: manual32 survives actual integrated-server stop/reopen and reconnect
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/garden_trowel_32 at32
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick_32 at32
+PASS: actual personal command selects auto -> 16
+PASS: native renderer chose blocktonepathtools:item/mortar_trowel at16
+PASS: native renderer chose blocktonepathtools:item/garden_trowel at16
+PASS: native renderer chose blocktonepathtools:item/prospecting_pick at16
+RESULT: PASS; 37 sprite assertions

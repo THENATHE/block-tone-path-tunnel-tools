@@ -1,0 +1,74 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.6.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.17.20
+
+> Task :clean
+
+> Task :compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processResources
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :compatibilityTest
+Build permissions API checks passed: 13
+
+> Task :integrationLogicTest
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:<home>/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.9/438e036486bad66b189bff385dd07dea4f74a146/joml-1.10.9.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[12:16:36] [main/INFO]: [STDOUT]: Integration logic checks passed: 194
+
+> Task :logicTest
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:<home>/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.9/438e036486bad66b189bff385dd07dea4f74a146/joml-1.10.9.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[12:16:40] [main/INFO]: [STDOUT]: Type filters and 573 replacement shape states passed.
+[12:16:40] [main/INFO]: [STDOUT]: Expanded categories and 120 torch mounting replacements passed.
+[12:16:40] [main/INFO]: [STDOUT]: Expanded lighting/attachment/connection properties passed for 1241 states.
+[12:16:40] [main/INFO]: [STDOUT]: Tool preview geometry, alignment, rail, and bounded particle checks passed.
+[12:16:40] [main/INFO]: [STDOUT]: Block Tone & Path Tools logic checks passed.
+
+> Task :processIncludeJars
+> Task :jar
+
+> Task :compileQaJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processQaResources
+> Task :qaClasses
+> Task :qaJar
+> Task :sourcesJar
+> Task :test
+
+> Task :tunnelGeometryTest
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:<home>/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.9/438e036486bad66b189bff385dd07dea4f74a146/joml-1.10.9.jar)
+WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[12:16:44] [main/INFO]: [STDOUT]: Tunnel geometry and safety regression checks passed.
+
+> Task :validateAccessWidener NO-SOURCE
+> Task :check
+> Task :assemble
+> Task :build
+
+[Incubating] Problems report is available at: file://<home>/SSDC/Plugins/WP%20Plugin%20Dev/Minecraft/block-tone-path-tunnel-tools-26.2/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.6.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 18s
+15 actionable tasks: 15 executed

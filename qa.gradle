@@ -1,0 +1,48 @@
+// Development-only server integration harness. Its output is never part of the release mod.
+sourceSets {
+    qa {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath += output + compileClasspath + sourceSets.main.runtimeClasspath
+    }
+}
+
+tasks.register('qaJar', Jar) {
+    group = 'verification'
+    description = 'Builds the separate live-server QA mod; use only in a disposable test world.'
+    dependsOn tasks.named('qaClasses')
+    archiveBaseName = 'blocktools-development-qa'
+    archiveVersion = '1'
+    destinationDirectory = layout.buildDirectory.dir('qa')
+    from sourceSets.qa.output
+}
+
+if (project.hasProperty('liveQa')) {
+    def qaRun = file(project.findProperty('qaRunDir') ?: 'build/qa-run')
+    loom.runs.server {
+        runDir = qaRun.absolutePath
+        vmArg '-Dblocktools.qa=true'
+    }
+    tasks.register('prepareQaServer') {
+        dependsOn tasks.named('qaJar')
+        doLast {
+            qaRun.mkdirs()
+            def mods = new File(qaRun, 'mods')
+            mods.mkdirs()
+            copy { from tasks.named('qaJar').get().archiveFile; into mods }
+            new File(qaRun, 'qa-result.txt').delete()
+            new File(qaRun, 'eula.txt').text = 'eula=true\n'
+            def props = new File(qaRun, 'server.properties')
+            if (!props.exists()) props.text = 'online-mode=false\nserver-ip=127.0.0.1\nserver-port=0\nspawn-protection=0\nview-distance=2\nsimulation-distance=2\nlevel-type=minecraft:flat\ngenerate-structures=false\nmax-tick-time=-1\n'
+        }
+    }
+    tasks.named('runServer') {
+        dependsOn tasks.named('prepareQaServer')
+        if (project.hasProperty('qaJava')) executable = project.property('qaJava').toString()
+        doLast {
+            def result = new File(qaRun, 'qa-result.txt')
+            if (!result.exists() || !result.text.contains('RESULT: PASS;')) {
+                throw new GradleException('Live server QA failed; inspect ' + result.absolutePath)
+            }
+        }
+    }
+}

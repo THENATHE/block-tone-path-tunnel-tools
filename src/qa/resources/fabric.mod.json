@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "blocktools_development_qa",
+  "version": "1",
+  "name": "Block Tools disposable-world QA",
+  "environment": "server",
+  "entrypoints": { "main": ["com.thenathe.blocktools.qa.LiveServerQa"] },
+  "depends": { "fabricloader": ">=0.19.0", "blocktonepathtools": "*", "fabric-api": "*" }
+}

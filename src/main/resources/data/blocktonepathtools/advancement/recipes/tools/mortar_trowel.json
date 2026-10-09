@@ -1,0 +1,32 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "blocktonepathtools:polymer_tools_enabled"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "automatic": {
+      "trigger": "minecraft:tick"
+    },
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": [
+          "blocktonepathtools:mortar_trowel"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "automatic",
+      "has_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocktonepathtools:mortar_trowel"
+    ]
+  }
+}

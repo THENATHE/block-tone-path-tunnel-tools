@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "assertions": 79,
+  "minecraft": "26.2",
+  "polymer": "0.17.5+26.2",
+  "java": 25,
+  "mode": "actual graphical client + integrated singleplayer server",
+  "input": "Fabric TestInput keyboard events; vanilla client movement and network updates",
+  "forward_distance_blocks": 11.865370743653049,
+  "enclosed_slices": 13,
+  "air_shell_slices": 8,
+  "release_jar": "block-tone-path-tunnel-tools-1.6.4+26.2.jar",
+  "release_jar_sha256": "4ee1c37c3bec51fe6150679cdab1051bc14c89fa2493e2f94e7dc688bac28e5b",
+  "command": "./gradlew check build runClient -PclientQa -PwithPolymer --offline",
+  "screenshots": [
+    "0000_tunnel-straight-client-walk.png",
+    "0001_tunnel-off-line-no-extension.png",
+    "0002_tunnel-reequipped-new-line.png"
+  ]
+}

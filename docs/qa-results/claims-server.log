@@ -1,0 +1,211 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.17.20
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :generateLog4jConfig UP-TO-DATE
+> Task :generateDLIConfig UP-TO-DATE
+> Task :configureLaunch UP-TO-DATE
+> Task :compileQaJava UP-TO-DATE
+> Task :processQaResources UP-TO-DATE
+> Task :qaClasses UP-TO-DATE
+> Task :qaJar UP-TO-DATE
+> Task :prepareQaServer
+
+> Task :runServer
+[21:33:49] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 26.2 with Fabric Loader 0.19.3
+[21:33:49] [main/INFO] (FabricLoader/Mappings) Mappings not present!
+[21:33:49] [main/INFO] (FabricLoader) Loading 45 mods:
+	- blocktonepathtools 1.6.0-tunnel-test+26.2
+	- blocktools_development_qa 1
+	- fabric-api 0.158.0+26.2
+	   |-- fabric-key-mapping-api-v1 2.0.5+e2bdee789e
+	   |-- fabric-model-loading-api-v1 8.0.16+c80601bb9e
+	   |-- fabric-renderer-api-v1 14.1.3+2b0d8a229e
+	   |-- fabric-renderer-indigo 9.1.3+2b0d8a229e
+	   |-- fabric-rendering-v1 25.3.2+515ac5339e
+	   |-- fabric-screen-api-v1 5.2.0+58e078ad9e
+	   \-- fabric-sound-api-v1 2.0.5+11a26f319e
+	- fabric-api-base 2.0.4+ece063239e
+	- fabric-api-lookup-api-v1 2.0.17+11e1c9a39e
+	- fabric-biome-api-v1 18.0.6+c7bd5b8e9e
+	- fabric-block-api-v1 3.0.3+ec56b6019e
+	- fabric-block-getter-api-v2 2.0.7+ec56b6019e
+	- fabric-command-api-v2 3.1.0+00cb03469e
+	- fabric-content-registries-v0 11.3.1+37b1aa249e
+	- fabric-convention-tags-v2 4.7.0+1f023a9e9e
+	- fabric-crash-report-info-v1 1.0.5+086d547a9e
+	- fabric-creative-tab-api-v1 5.0.14+d871b99e9e
+	- fabric-data-attachment-api-v1 2.2.18+515ac5339e
+	- fabric-data-generation-api-v1 25.5.0+aed122aa9e
+	- fabric-debug-api-v1 1.0.2+c792624d9e
+	- fabric-dimensions-v1 5.1.11+515ac5339e
+	- fabric-entity-events-v1 5.0.5+06488ac19e
+	- fabric-events-interaction-v0 5.2.7+515ac5339e
+	- fabric-game-rule-api-v1 4.0.8+46a6d00c9e
+	- fabric-gametest-api-v1 4.0.21+4a7fa0819e
+	- fabric-item-api-v1 14.5.0+c68f6cbe9e
+	- fabric-lifecycle-events-v1 4.1.3+4575b05f9e
+	- fabric-loot-api-v3 3.0.17+06488ac19e
+	- fabric-menu-api-v1 2.0.16+086d547a9e
+	- fabric-message-api-v1 7.0.8+bb2ed3f79e
+	- fabric-networking-api-v1 6.3.3+72073ef09e
+	- fabric-object-builder-api-v1 24.1.0+6fcd5f039e
+	- fabric-particles-v1 5.0.18+d1756aa99e
+	- fabric-permission-api-v1 1.0.5+e442d8d09e
+	- fabric-recipe-api-v1 9.0.20+11e1c9a39e
+	- fabric-registry-sync-v0 7.1.0+c7bd5b8e9e
+	- fabric-rendering-fluids-v1 6.0.4+06488ac19e
+	- fabric-resource-conditions-api-v1 6.1.0+10e9a28b9e
+	- fabric-resource-loader-v0 3.3.20+4fc5413f9e
+	- fabric-resource-loader-v1 2.0.13+9edec1269e
+	- fabric-serialization-api-v1 2.0.4+11a26f319e
+	- fabric-tag-api-v1 2.1.4+515ac5339e
+	- fabric-transfer-api-v1 8.0.12+11dbb7d79e
+	- fabric-transitive-access-wideners-v1 8.1.4+67c847259e
+	- fabricloader 0.19.3
+	- java 26
+	- minecraft 26.2
+	- mixinextras 0.5.4
+	- preciousstones 0.4.3+26.2
+[21:33:49] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:<home>/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.17.3+mixin.0.8.7/41c4a3984a80f4679e759fb9f495587acc5cdac7/sponge-mixin-0.17.3+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[21:33:49] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_25
+[21:33:50] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[21:33:53] [main/INFO] (preciousstones) Vanilla Friendly Protection and Shop is ready.
+[21:33:53] [main/INFO] (blocktonepathtools) Loaded Block Tone & Path Tools configuration from ./config/block-tone-path-tools.json.
+[21:33:53] [main/INFO] (blocktonepathtools) Loaded experimental tunnel settings from ./config/block-tone-tunnel-tools.json.
+[21:33:53] [main/INFO] (blocktonepathtools) Block Tone, Path & Tunnel Tools initialized with server-authoritative vanilla-client support.
+[21:33:53] [main/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[21:33:54] [Worker-Main-3/INFO] (Minecraft) No existing world data, creating new world
+[21:33:54] [Worker-Main-3/ERROR] (Minecraft) No key layers in MapLike[{}]
+[21:33:54] [main/INFO] (Minecraft) Loaded 1585 recipes
+[21:33:54] [main/INFO] (Minecraft) Loaded 1688 advancements
+[21:33:54] [main/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 66 new biomes in 886.9 μs
+[21:33:54] [Server thread/INFO] (Minecraft) Starting minecraft server version 26.2
+[21:33:54] [Server thread/INFO] (Minecraft) Loading properties
+[21:33:54] [Server thread/INFO] (Minecraft) Default game type: SURVIVAL
+[21:33:54] [Server thread/INFO] (Minecraft) Generating keypair
+[21:33:54] [Server thread/INFO] (Minecraft) Starting Minecraft server on 127.0.0.1:0
+[21:33:54] [Server thread/WARN] (Minecraft) **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[21:33:54] [Server thread/WARN] (Minecraft) The server will make no attempt to authenticate usernames. Beware.
+[21:33:54] [Server thread/WARN] (Minecraft) While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[21:33:54] [Server thread/WARN] (Minecraft) To change this, set "online-mode" to "true" in the server.properties file.
+[21:33:54] [Server thread/INFO] (Minecraft) Preparing level "world"
+[21:33:54] [Server thread/INFO] (Minecraft) Selecting global world spawn...
+[21:33:55] [Server thread/INFO] (Minecraft) Loading 0 persistent chunks...
+[21:33:55] [Server thread/INFO] (Minecraft) Preparing spawn area: 100%
+[21:33:55] [Server thread/INFO] (Minecraft) Time elapsed: 231 ms
+[21:33:55] [Server thread/INFO] (Minecraft) Done (0.326s)! For help, type "help"
+[21:33:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[21:33:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[21:33:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[21:33:55] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (world): All chunks are saved
+[21:33:55] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21:33:55] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21:33:55] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[21:33:55] [Server thread/ERROR] (blocktonepathtools) Could not load ./config/block-tone-path-tools.json; retaining safe defaults.
+
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Expected ':' at line 1 column 15 path $.definitely
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+	at knot//com.google.gson.Gson.fromJson(Gson.java:1106)
+	at knot//com.google.gson.Gson.fromJson(Gson.java:981)
+	at knot//com.google.gson.Gson.fromJson(Gson.java:919)
+	at knot//com.thenathe.blocktools.config.ConfigManager.load(ConfigManager.java:38)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.configPreservation(LiveServerQa.java:241)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.caseOf(LiveServerQa.java:323)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.run(LiveServerQa.java:86)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.lambda$onInitialize$1(LiveServerQa.java:59)
+	at knot//net.minecraft.server.TickTask.run(TickTask.java:18)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
+	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
+	at knot//net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:933)
+	at knot//net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:195)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:114)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.lambda$onInitialize$0(LiveServerQa.java:59)
+	at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.lambda$static$3(ServerLifecycleEvents.java:49)
+	at knot//net.minecraft.server.MinecraftServer.handler$zfk000$fabric-lifecycle-events-v1$afterSetupServer(MinecraftServer.java:2424)
+	at knot//net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:745)
+	at knot//net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:320)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: com.google.gson.stream.MalformedJsonException: Expected ':' at line 1 column 15 path $.definitely
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+	at knot//com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1817)
+	at knot//com.google.gson.stream.JsonReader.doPeek(JsonReader.java:657)
+	at knot//com.google.gson.stream.JsonReader.skipValue(JsonReader.java:1396)
+	at knot//com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:515)
+	at knot//com.google.gson.Gson.fromJson(Gson.java:1080)
+	... 19 more
+[21:33:55] [Server thread/INFO] (blocktonepathtools) Loaded Block Tone & Path Tools configuration from ./config/block-tone-path-tools.json.
+[21:33:55] [Server thread/ERROR] (blocktonepathtools) Could not load experimental tunnel settings; retaining safe defaults.
+
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Expected ':' at line 1 column 15 path $.definitely
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+	at knot//com.google.gson.Gson.fromJson(Gson.java:1106)
+	at knot//com.google.gson.Gson.fromJson(Gson.java:981)
+	at knot//com.google.gson.Gson.fromJson(Gson.java:919)
+	at knot//com.thenathe.blocktools.tunnel.TunnelConfigManager.load(TunnelConfigManager.java:29)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.configPreservation(LiveServerQa.java:242)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.caseOf(LiveServerQa.java:323)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.run(LiveServerQa.java:86)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.lambda$onInitialize$1(LiveServerQa.java:59)
+	at knot//net.minecraft.server.TickTask.run(TickTask.java:18)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:173)
+	at knot//net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:23)
+	at knot//net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:933)
+	at knot//net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:195)
+	at knot//net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:114)
+	at knot//com.thenathe.blocktools.qa.LiveServerQa.lambda$onInitialize$0(LiveServerQa.java:59)
+	at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.lambda$static$3(ServerLifecycleEvents.java:49)
+	at knot//net.minecraft.server.MinecraftServer.handler$zfk000$fabric-lifecycle-events-v1$afterSetupServer(MinecraftServer.java:2424)
+	at knot//net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:745)
+	at knot//net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:320)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: com.google.gson.stream.MalformedJsonException: Expected ':' at line 1 column 15 path $.definitely
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+	at knot//com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1817)
+	at knot//com.google.gson.stream.JsonReader.doPeek(JsonReader.java:657)
+	at knot//com.google.gson.stream.JsonReader.skipValue(JsonReader.java:1396)
+	at knot//com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:515)
+	at knot//com.google.gson.Gson.fromJson(Gson.java:1080)
+	... 19 more
+[21:33:55] [Server thread/ERROR] (blocktonepathtools) ./config/block-tone-path-tools.json uses a future config version 999; retaining defaults without rewriting it.
+[21:33:55] [Server thread/ERROR] (blocktonepathtools) ./config/block-tone-tunnel-tools.json uses future tunnel config version 999; using safe defaults without rewriting it.
+[21:33:55] [Server thread/INFO] (blocktonepathtools) Loaded experimental tunnel settings from ./config/block-tone-tunnel-tools.json.
+[21:33:55] [Server thread/INFO] (blocktonepathtools) Loaded Block Tone & Path Tools configuration from ./config/block-tone-path-tools.json.
+[21:33:55] [Server thread/INFO] (blocktonepathtools) Loaded experimental tunnel settings from ./config/block-tone-tunnel-tools.json.
+[21:33:55] [Server thread/INFO] (blocktonepathtools) Live server QA:
+PASS: survival shortage leaves world and inventory unchanged
+PASS: survival consumes exact shell materials from shulker
+PASS: obstructions and unsafe shells cause no partial edits
+PASS: creative lining requires no inventory
+PASS: native adventure spectator unloaded bounds and border checks
+PASS: straight survival rail runs preserve shell and power boosters
+PASS: special rails are preserved
+PASS: commands aliases pause disarm and mutually exclusive modes
+PASS: blocktone modifies selection and charges survival inventory
+PASS: path tool applies a real survival stripe with exact inventory charge
+PASS: path dirt conversion and shortage regressions
+PASS: held-tool movement catch-up backtracking and reset safety
+PASS: malformed and future settings preserved byte for byte
+PASS: standalone copy has no Precious Stones claim engine
+PASS: optional Precious Stones real claims and ownership restrictions
+RESULT: PASS; assertions=149; failed_cases=0
+
+[21:33:55] [Server thread/INFO] (Minecraft) Stopping server
+[21:33:55] [Server thread/INFO] (Minecraft) Saving players
+[21:33:55] [Server thread/INFO] (Minecraft) Saving worlds
+[21:33:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[21:34:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[21:34:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[21:34:08] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (world): All chunks are saved
+[21:34:08] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21:34:08] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21:34:08] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+
+BUILD SUCCESSFUL in 23s
+9 actionable tasks: 2 executed, 7 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html

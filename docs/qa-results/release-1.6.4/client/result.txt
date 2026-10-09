@@ -1,0 +1,83 @@
+PASS: default recipe unlocked: mortar_trowel
+PASS: default recipe unlocked: garden_trowel
+PASS: default recipe unlocked: prospecting_pick
+PASS: native client Creative tab contains Block Toning Tool
+PASS: client crafting book received Block Toning Tool
+PASS: native client Creative tab contains Path Tool
+PASS: client crafting book received Path Tool
+PASS: native client Creative tab contains Tunnel Tool
+PASS: client crafting book received Tunnel Tool
+PASS: client command configured tunnel successfully
+PASS: forward key moved real client at least 8 blocks: (0.5, 100.0, 0.5) -> (0.5, 100.0, 12.365370743653049)
+PASS: held run anchors original south-facing line: origin=BlockPos{x=0, y=100, z=0} direction=south
+PASS: actual walk completed at least eight slices: 13
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=0}
+PASS: walk laid floor BlockPos{x=0, y=100, z=0}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=0}
+PASS: walk built both walls BlockPos{x=0, y=100, z=0}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=1}
+PASS: walk laid floor BlockPos{x=0, y=100, z=1}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=1}
+PASS: walk built both walls BlockPos{x=0, y=100, z=1}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=2}
+PASS: walk laid floor BlockPos{x=0, y=100, z=2}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=2}
+PASS: walk built both walls BlockPos{x=0, y=100, z=2}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=3}
+PASS: walk laid floor BlockPos{x=0, y=100, z=3}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=3}
+PASS: walk built both walls BlockPos{x=0, y=100, z=3}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=4}
+PASS: walk laid floor BlockPos{x=0, y=100, z=4}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=4}
+PASS: walk built both walls BlockPos{x=0, y=100, z=4}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=5}
+PASS: walk laid floor BlockPos{x=0, y=100, z=5}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=5}
+PASS: walk built both walls BlockPos{x=0, y=100, z=5}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=6}
+PASS: walk laid floor BlockPos{x=0, y=100, z=6}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=6}
+PASS: walk built both walls BlockPos{x=0, y=100, z=6}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=7}
+PASS: walk laid floor BlockPos{x=0, y=100, z=7}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=7}
+PASS: walk built both walls BlockPos{x=0, y=100, z=7}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=8}
+PASS: walk laid floor BlockPos{x=0, y=100, z=8}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=8}
+PASS: walk built both walls BlockPos{x=0, y=100, z=8}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=9}
+PASS: walk laid floor BlockPos{x=0, y=100, z=9}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=9}
+PASS: walk built both walls BlockPos{x=0, y=100, z=9}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=10}
+PASS: walk laid floor BlockPos{x=0, y=100, z=10}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=10}
+PASS: walk built both walls BlockPos{x=0, y=100, z=10}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=11}
+PASS: walk laid floor BlockPos{x=0, y=100, z=11}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=11}
+PASS: walk built both walls BlockPos{x=0, y=100, z=11}
+PASS: completed center remains on original line BlockPos{x=0, y=100, z=12}
+PASS: walk laid floor BlockPos{x=0, y=100, z=12}
+PASS: walk built ceiling BlockPos{x=0, y=100, z=12}
+PASS: walk built both walls BlockPos{x=0, y=100, z=12}
+SCREENSHOT: 0000_tunnel-straight-client-walk.png
+PASS: rotated backward walk does not edit or change original direction
+PASS: real strafe leaves original line: (-1.699999988079071, 100.0, 10.641650244009085)
+PASS: off-line forward movement cannot shift held tunnel line
+SCREENSHOT: 0001_tunnel-off-line-no-extension.png
+PASS: unequipping via hotbar clears run anchor
+PASS: re-equipping accepts new parallel line
+PASS: new held run builds from actual forward movement
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=13}
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=14}
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=15}
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=16}
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=17}
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=18}
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=19}
+PASS: air wall/ceiling palette builds only floor BlockPos{x=-2, y=100, z=20}
+SCREENSHOT: 0002_tunnel-reequipped-new-line.png
+RESULT: PASS; actual client keyboard movement, integrated server, Creative inventory and recipe sync

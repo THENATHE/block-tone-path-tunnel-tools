@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "version": "1.6.5+26.2",
+  "java": 25,
+  "minecraft": "26.2",
+  "polymer": "0.17.5+26.2",
+  "dedicated_polymer_assertions": 679,
+  "dedicated_absent_assertions": 449,
+  "real_client_sprite_assertions": 37,
+  "real_client_walk_assertions": 79,
+  "forward_distance_blocks": 11.865370743653049,
+  "enclosed_slices": 13,
+  "air_shell_slices": 8,
+  "jar": "block-tone-path-tunnel-tools-1.6.5+26.2.jar",
+  "sha256": "5be50f38c3825bccc5cb0722aebcfa4add06ce0233b472501e470f08020e1a20",
+  "client_command": "./gradlew check build runClient -PclientQa -PwithPolymer --offline"
+}

@@ -1,0 +1,27 @@
+# Build caches and generated outputs
+/.gradle/
+/build/
+/out/
+/logs/
+/run/
+/runs/
+# Local game instances and worlds
+/config/
+/world/
+/worlds/
+/saves/
+/screenshots/
+/crash-reports/
+*.hprof
+# IDE and operating system state
+/.idea/
+*.iml
+.classpath
+.project
+/.settings/
+/.vscode/
+.DS_Store
+Thumbs.db
+# Local credentials
+.env
+.env.*

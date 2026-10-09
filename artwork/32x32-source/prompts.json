@@ -1,0 +1,26 @@
+[
+  {
+    "asset": "src/main/resources/assets/blocktonepathtools/textures/item/mortar_trowel_32.png",
+    "reference": "src/main/resources/assets/blocktonepathtools/textures/item/mortar_trowel.png",
+    "source": "artwork/32x32-source/mortar_trowel.png",
+    "generator": "Built-in image_gen",
+    "prompt": "Edit target: existing Minecraft mortar trowel sprite. Faithful32x32 version preserving silhouette, orientation, proportions, colors and transparent margins; finer steel highlights and wood detail, strict logical32 grid, hard pixel edges, opaque or transparent alpha, no smoothing/blur/gradients/perspective/labels/background.",
+    "normalization": "ImageMagick point/nearest-neighbor reduction to32x32, alpha threshold50%, strip metadata. No smoothing."
+  },
+  {
+    "asset": "src/main/resources/assets/blocktonepathtools/textures/item/garden_trowel_32.png",
+    "reference": "src/main/resources/assets/blocktonepathtools/textures/item/garden_trowel.png",
+    "source": "artwork/32x32-source/garden_trowel.png",
+    "generator": "Built-in image_gen",
+    "prompt": "Edit target: the supplied Minecraft garden hand trowel with narrow elongated silver scoop blade, central crease, and brown wooden grip, diagonal handle lower left and pointed blade upper right sprite. Create a faithful higher-resolution 32x32 pixel-art variant of THIS same item. Preserve original silhouette, screen orientation, proportions, palette, and transparent margins. Same design, not a redesign; add restrained finer one-cell detail and highlights appropriate to a vanilla-style 32x32 texture pack. Strict uniform EXACTLY32 by32 logical square pixel grid across the entire square canvas. No details smaller than one logical cell. Hard square stair-step edges; no anti-aliasing, blur, gradients, smooth shading, cast shadows, text, borders or background. Every pixel fully opaque or fully transparent; genuine transparent alpha background. If the file canvas exceeds32px, display the32x32 grid at exact integer scale for nearest-neighbor reduction. Only one complete isolated sprite, no comparison sheet.",
+    "normalization": "ImageMagick point/nearest-neighbor reduction to32x32, alpha threshold50%, strip metadata. No smoothing."
+  },
+  {
+    "asset": "src/main/resources/assets/blocktonepathtools/textures/item/prospecting_pick_32.png",
+    "reference": "src/main/resources/assets/blocktonepathtools/textures/item/prospecting_pick.png",
+    "source": "artwork/32x32-source/prospecting_pick.png",
+    "generator": "Built-in image_gen",
+    "prompt": "Edit target: the supplied Minecraft geologist prospecting pick / rock hammer with brown wooden handle diagonally lower left to upper right and asymmetric perpendicular steel hammer head, square hammer face opposite pointed pick, preserving the precise orientation of the original sprite. Create a faithful higher-resolution 32x32 pixel-art variant of THIS same item. Preserve original silhouette, screen orientation, proportions, palette, and transparent margins. Same design, not a redesign; add restrained finer one-cell detail and highlights appropriate to a vanilla-style 32x32 texture pack. Strict uniform EXACTLY32 by32 logical square pixel grid across the entire square canvas. No details smaller than one logical cell. Hard square stair-step edges; no anti-aliasing, blur, gradients, smooth shading, cast shadows, text, borders or background. Every pixel fully opaque or fully transparent; genuine transparent alpha background. If the file canvas exceeds32px, display the32x32 grid at exact integer scale for nearest-neighbor reduction. Only one complete isolated sprite, no comparison sheet.",
+    "normalization": "ImageMagick point/nearest-neighbor reduction to32x32, alpha threshold50%, strip metadata. No smoothing."
+  }
+]

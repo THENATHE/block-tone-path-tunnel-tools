@@ -1,0 +1,7 @@
+PASS: JAR integrity and Fabric metadata
+PASS: expected tone/path/tunnel classes
+PASS: 59 production classes targeting Java 25
+PASS: no claim engine, mixins, or development QA/test classes
+PASS: retired tunnel experiment deleted
+SHA-256: c79b2e43b1171c0eb989968973a753d8710851ff107576022a0da7f63465798b
+Release: Builds/Minecraft/block-tone-tunnel-experimental-1.6.0-tunnel-test+26.2.jar

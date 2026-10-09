@@ -1,0 +1,45 @@
+// Development-only real-client input tests, excluded from release artifacts.
+sourceSets {
+    clientqa {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath += output + compileClasspath + sourceSets.main.runtimeClasspath
+    }
+}
+tasks.register('clientqaJar', Jar) {
+    group = 'verification'
+    dependsOn tasks.named('clientqaClasses')
+    archiveBaseName = 'blocktools-client-qa'
+    archiveVersion = '1'
+    destinationDirectory = layout.buildDirectory.dir('clientqa')
+    from sourceSets.clientqa.output
+}
+if (project.hasProperty('clientQa')) {
+    def qaRun = file('build/clientqa-run')
+    loom.runs.client {
+        runDir = qaRun.absolutePath
+        vmArg '-Dfabric.client.gametest'
+    }
+    tasks.register('prepareClientQa') {
+        dependsOn tasks.named('clientqaJar')
+        doLast {
+            qaRun.mkdirs()
+            def mods = new File(qaRun, 'mods')
+            mods.mkdirs()
+            copy { from tasks.named('clientqaJar').get().archiveFile; into mods }
+            new File(qaRun, 'clientqa-result.txt').delete()
+            new File(qaRun, 'sprite-clientqa-result.txt').delete()
+        }
+    }
+    tasks.named('runClient') {
+        dependsOn tasks.named('prepareClientQa')
+        if (project.hasProperty('clientQaJava')) executable = project.property('clientQaJava').toString()
+        doLast {
+            def result = new File(qaRun, 'clientqa-result.txt')
+            def spriteResult = new File(qaRun, 'sprite-clientqa-result.txt')
+            if (!spriteResult.exists() || !spriteResult.text.contains('RESULT: PASS;'))
+                throw new GradleException('Client sprite QA failed; inspect ' + spriteResult.absolutePath)
+            if (!result.exists() || !result.text.contains('RESULT: PASS;'))
+                throw new GradleException('Client walk QA failed; inspect ' + result.absolutePath)
+        }
+    }
+}

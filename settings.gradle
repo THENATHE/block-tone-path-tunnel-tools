@@ -1,0 +1,17 @@
+pluginManagement {
+	repositories {
+		maven { url = "https://maven.fabricmc.net/" }
+		mavenCentral()
+		gradlePluginPortal()
+	}
+}
+
+rootProject.name = "block-tone-path-tunnel-tools"
+
+dependencyResolutionManagement {
+	versionCatalogs {
+		create("libs") {
+			from(files("libs.versions.toml"))
+		}
+	}
+}

@@ -1,0 +1,6 @@
+PASS: ZIP integrity; Fabric blocktonepathtools 1.6.5+26.2; client entrypoint; 80 Java25 production classes byte-identical to tested outputs; no QA/artwork sources
+PASS: mortar_trowel: original16 unchanged, native32 RGBA/binary alpha, blur disabled
+PASS: garden_trowel: original16 unchanged, native32 RGBA/binary alpha, blur disabled
+PASS: prospecting_pick: original16 unchanged, native32 RGBA/binary alpha, blur disabled
+PASS: 3 high-resolution models and their texture references
+SHA256: 5be50f38c3825bccc5cb0722aebcfa4add06ce0233b472501e470f08020e1a20  block-tone-path-tunnel-tools-1.6.5+26.2.jar

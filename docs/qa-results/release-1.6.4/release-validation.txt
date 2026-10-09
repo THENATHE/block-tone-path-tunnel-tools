@@ -1,0 +1,4 @@
+PASS: archive integrity, metadata, version, labels, 3 recipes and automatic unlocks.
+PASS: 72 Java 25 production classes match final tested compiled output byte-for-byte.
+PASS: no server or client QA/test classes in release.
+SHA-256: 4ee1c37c3bec51fe6150679cdab1051bc14c89fa2493e2f94e7dc688bac28e5b

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "blocktonepathtools:item/mortar_trowel_32"
+  }
+}

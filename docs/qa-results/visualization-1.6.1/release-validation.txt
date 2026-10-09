@@ -1,0 +1,6 @@
+PASS: JAR integrity, metadata and tested production classes
+PASS: private selection, path and tunnel preview code included
+PASS: no QA or Precious Stones engine classes
+Production classes: 67
+SHA-256: 2f8abfd268046cb750da0abcbe2625fbd3a49913a373b662d465fedfc786b570
+Release: Builds/Minecraft/block-tone-tunnel-experimental-1.6.1-tunnel-test+26.2.jar
